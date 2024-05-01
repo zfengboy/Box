@@ -179,7 +179,7 @@ public class PlayActivity extends BaseActivity {
                     errorWithRetry("嗅探错误", false);
                 } else if (msg.what == 200) {
                     if (mHandler.hasMessages(100)) {
-                        setTip("嗅探视频中...", true, false);
+                        setTip("正在嗅探视频", true, false);
                     }
                 } else if (msg.what == 300) {
                     setTip((String)msg.obj, false, true);
