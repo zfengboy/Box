@@ -116,13 +116,18 @@ public class ImgUtil {
     }
 
     public static DiskCacheStrategy getDiskCacheStrategy(int index) {
-        return switch (index) {
-            case 1 -> DiskCacheStrategy.RESOURCE;
-            case 2 -> DiskCacheStrategy.DATA;
-            case 3 -> DiskCacheStrategy.ALL;
-            case 4 -> DiskCacheStrategy.AUTOMATIC;
-            default -> DiskCacheStrategy.NONE;
-        };
+        switch (index) {
+            case 1:
+                return DiskCacheStrategy.RESOURCE;
+            case 2:
+                return DiskCacheStrategy.DATA;
+            case 3:
+                return DiskCacheStrategy.ALL;
+            case 4:
+                return DiskCacheStrategy.AUTOMATIC;
+            default:
+                return DiskCacheStrategy.NONE;
+        }
     }
 
     private static Object getUrl(String url) {
